@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+  <android.support.constraint.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+      <android.support.design.widget.TextInputEditText
+          android:id="@+id/inputEdit"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:imeOptions="actionNext"
+          android:maxLines="1"
+          android:saveEnabled="false"
+          android:theme="@style/InputEditText"
+          android:textSize="16sp"
+          android:hint="Name"
+          android:text="John"
+          />
+    </android.support.design.widget.TextInputLayout>
+    <TextView
+        android:id="@+id/inputExtra"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:saveEnabled="false"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/inputLabel"
+        app:layout_constraintStart_toStartOf="@+id/inputLabel"
+        app:layout_constraintTop_toBottomOf="@+id/inputLabel"
+        tools:visibility="visible"
+        />
+  </android.support.constraint.ConstraintLayout>
+</merge>
